@@ -30,6 +30,7 @@ class User extends Model implements AuthenticatableContract,
     protected $collection="users";
 
     protected $dates = ['dob'];
+
     /**
      * The attributes that should be hidden for arrays.
      *

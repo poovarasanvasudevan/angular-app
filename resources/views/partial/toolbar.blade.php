@@ -26,10 +26,10 @@
             </div>
             <div class="col col-4">
 
-                <md-button class="md-icon-button" id="notification-btn" aria-label="Settings">
+                <md-button class="md-icon-button notification-btn" id="no" aria-label="Settings">
                     <md-icon class="zmdi zmdi-globe icon"></md-icon>
                 </md-button>
-                <div class="webui-popover-content padding0" style="width: 100% !important;" >
+                <div class="webui-popover-content padding0" style="width: 100% !important;">
                     <md-list class="md-dense padding0 scroll" layout-fill>
                         <md-list-item class="md-2-line" ng-repeat="phone in [1,2,3,4,5,6,7,8,9]" ng-click="alert();">
                             <img ng-src="{{$currentUser->avatar}}" class="md-avatar"/>
@@ -42,9 +42,17 @@
                     </md-list>
                 </div>
 
-                <md-button class="md-icon-button" aria-label="Settings">
+                <md-button class="md-icon-button apps-btn" aria-label="Settings">
                     <md-icon class="zmdi zmdi-apps icon"></md-icon>
                 </md-button>
+                <div class="webui-popover-content padding0" style="width: 100% !important;">
+
+                        <div class="col col-4" ng-repeat="phone in [1,2,3,4,5,6,7,8,9]">
+                            <md-icon class="zmdi zmdi-google zmdi-hc-2x"></md-icon>
+                            hello [[phone]]
+                        </div>
+
+                </div>
 
                 <md-button class="md-icon-button" aria-label="Settings">
                     <md-icon class="zmdi zmdi-notifications icon"></md-icon>

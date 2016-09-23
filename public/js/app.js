@@ -12,11 +12,17 @@ app.controller('globalcontroller', function ($scope) {
 });
 
 $(function () {
-    $('#notification-btn').webuiPopover({
+    $('.notification-btn').webuiPopover({
         title:'Notification',
         placement:'bottom',
         height:'350',
         width:'320',
+        animation:'pop'
+    })
+
+    $('.apps-btn').webuiPopover({
+        title:'Application',
+        placement:'bottom',
         animation:'pop'
     })
     $('.scroll').slimScroll({
