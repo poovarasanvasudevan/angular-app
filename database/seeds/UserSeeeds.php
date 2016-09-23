@@ -26,7 +26,8 @@ class UserSeeeds extends Seeder
 
         for ($i = 0; $i < 10000; $i++) {
             $user = new \App\User();
-            $user->name = $faker->name;
+            $user->first_name = $faker->firstName;
+            $user->last_name = $faker->lastName;
             $user->email = 'test' . $i . '@example.com';
             $user->password = md5("password");
             $user->dob = $faker->date("Y-m-d");

@@ -34,7 +34,7 @@
                         <md-list-item class="md-2-line" ng-repeat="phone in [1,2,3,4,5,6]" ng-click="alert();">
                             <img ng-src="{{$currentUser->avatar}}" class="md-avatar"/>
                             <div class="md-list-item-text" ng-class="md-offset">
-                                <h3> {{$currentUser->name}} Shared a Photo</h3>
+                                <h3> {{$currentUser->first_name}} {{$currentUser->last_name}} Shared a Photo</h3>
                                 <p> type phone</p>
                             </div>
 

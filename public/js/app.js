@@ -16,6 +16,7 @@ $(function () {
         title:'Notification',
         placement:'bottom',
         height:'350',
+        width:'320',
         animation:'pop'
     })
     $('.scroll').slimScroll({
