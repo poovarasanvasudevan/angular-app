@@ -31,7 +31,7 @@
                 </md-button>
                 <div class="webui-popover-content padding0" style="width: 100% !important;" >
                     <md-list class="md-dense padding0 scroll" layout-fill>
-                        <md-list-item class="md-2-line" ng-repeat="phone in [1,2,3,4,5,6]" ng-click="alert();">
+                        <md-list-item class="md-2-line" ng-repeat="phone in [1,2,3,4,5,6,7,8,9]" ng-click="alert();">
                             <img ng-src="{{$currentUser->avatar}}" class="md-avatar"/>
                             <div class="md-list-item-text" ng-class="md-offset">
                                 <h3> {{$currentUser->first_name}} {{$currentUser->last_name}} Shared a Photo</h3>
