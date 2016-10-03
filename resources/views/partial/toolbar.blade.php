@@ -37,21 +37,20 @@
                                 <h3> {{$currentUser->first_name}} {{$currentUser->last_name}} Shared a Photo</h3>
                                 <p> type phone</p>
                             </div>
-
                         </md-list-item>
                     </md-list>
                 </div>
+
 
                 <md-button class="md-icon-button apps-btn" aria-label="Settings">
                     <md-icon class="zmdi zmdi-apps icon"></md-icon>
                 </md-button>
                 <div class="webui-popover-content padding0" style="width: 100% !important;">
-
-                        <div class="col col-4" ng-repeat="phone in [1,2,3,4,5,6,7,8,9]">
-                            <md-icon class="zmdi zmdi-google zmdi-hc-2x"></md-icon>
-                            hello [[phone]]
-                        </div>
-
+                    <md-grid-list md-cols="3" md-row-height="4:4">
+                        <md-grid-tile class="yellow" ng-repeat="user in socI" ng-click="alert()">
+                            <i class="zmdi [[user.icon]] zmdi-hc-4x" style="color: [[user.color]]"></i>
+                        </md-grid-tile>
+                    </md-grid-list>
                 </div>
 
                 <md-button class="md-icon-button" aria-label="Settings">

@@ -34,5 +34,9 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+    'gcm' => [
+        'key' => '',
+        'sender_id' => ''
+    ],
 
 ];

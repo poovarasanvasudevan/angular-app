@@ -25,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
 
                 JavaScript::put([
                     'themeColor' => $user->settings['theme'] ?? 'red',
+                    'USER_ID'=>Auth::user()->id
                 ]);
             } else {
                 JavaScript::put([

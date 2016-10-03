@@ -166,6 +166,7 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
+        NotificationChannels\WebPush\WebPushServiceProvider::class,
 
         /*
          * Package Service Providers...

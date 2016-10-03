@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Auth;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use JavaScript;
 
 class PageController extends Controller
 {
@@ -23,6 +24,7 @@ class PageController extends Controller
     function home()
     {
         if (Auth::user()) {
+
             return view("home.index");
         } else {
             return view("welcome");

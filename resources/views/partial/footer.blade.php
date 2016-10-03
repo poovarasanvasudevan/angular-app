@@ -8,6 +8,9 @@
 <script src="/js/angular-material.min.js"></script>
 <script src="/js/scroll.js"></script>
 <script src="/js/ngPopover.min.js"></script>
+<script src="/js/peer-server.js"></script>
 <script src="/js/app.js"></script>
+
+@yield('opt')
 </body>
 </html>
