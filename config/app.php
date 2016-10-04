@@ -167,6 +167,10 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,
         Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
         NotificationChannels\WebPush\WebPushServiceProvider::class,
+        Moloquent\MongodbServiceProvider::class,
+        Moloquent\Auth\PasswordResetServiceProvider::class,
+        Moloquent\MongodbQueueServiceProvider::class,
+        Moloquent\Passport\PassportServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -230,6 +234,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'JavaScript' => Laracasts\Utilities\JavaScript\JavaScriptFacade::class,
+        'MongoModel' => Jenssegers\Mongodb\Eloquent\Model::class,
+        'Moloquent' => Moloquent\Eloquent\Model::class,
 
     ],
 

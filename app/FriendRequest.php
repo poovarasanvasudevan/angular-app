@@ -3,11 +3,21 @@
 namespace App;
 
 
-use Jenssegers\Mongodb\Eloquent\Model;
+use Moloquent;
 
-class FriendRequest extends Model
+
+class FriendRequest extends Moloquent
 {
     //
     protected $collection = 'friend_request';
 
+    function fromUser()
+    {
+        $this->belongsTo('App\User', 'from_id');
+    }
+
+    function toUser()
+    {
+        $this->belongsTo('App\User', 'to_id');
+    }
 }

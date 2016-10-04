@@ -4,7 +4,8 @@ namespace App;
 
 
 use Jenssegers\Mongodb\Eloquent\HybridRelations;
-use Jenssegers\Mongodb\Eloquent\Model;
+use Moloquent;
+
 
 /**
  * App\Location
@@ -12,7 +13,7 @@ use Jenssegers\Mongodb\Eloquent\Model;
  * @property-read mixed $id
  * @mixin \Eloquent
  */
-class Location extends Model
+class Location extends Moloquent
 {
 
     protected $collection = "locations";

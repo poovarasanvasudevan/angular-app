@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Schema;
-use Jenssegers\Mongodb\Schema\Blueprint;
+use Moloquent\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
 class CreatePasswordResetsTable extends Migration

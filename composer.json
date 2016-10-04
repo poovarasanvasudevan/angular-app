@@ -12,7 +12,8 @@
         "doctrine/dbal": "^2.5",
         "laracasts/flash": "^2.0",
         "laracasts/utilities": "^2.1",
-        "laravel-notification-channels/webpush": "^0.0.1"
+        "laravel-notification-channels/webpush": "^0.0.1",
+        "moloquent/moloquent": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

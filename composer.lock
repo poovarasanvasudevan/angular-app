@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fc28df8c33c61c4439f2876280c8364f",
-    "content-hash": "778f3cb485e1bdc2c40346c5ebe9a274",
+    "hash": "d8cf3b2319e261ea1225009a3fea65b2",
+    "content-hash": "b16954160edc7cfd1692a951e32e55c9",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -1575,6 +1575,70 @@
                 "web"
             ],
             "time": "2016-07-28 22:53:50"
+        },
+        {
+            "name": "moloquent/moloquent",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/moloquent/moloquent.git",
+                "reference": "3b97861e52833e3d429b2eed0c90e3e81127d620"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/moloquent/moloquent/zipball/3b97861e52833e3d429b2eed0c90e3e81127d620",
+                "reference": "3b97861e52833e3d429b2eed0c90e3e81127d620",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/container": "^5.1",
+                "illuminate/database": "^5.1",
+                "illuminate/events": "^5.1",
+                "illuminate/support": "^5.1",
+                "mongodb/mongodb": "^1.0.0"
+            },
+            "require-dev": {
+                "laravel/passport": "^1.0",
+                "mockery/mockery": "^0.9",
+                "orchestra/testbench": "^3.1",
+                "phpunit/phpunit": "^4.0|^5.0",
+                "satooshi/php-coveralls": "^0.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Moloquent\\": "src/"
+                },
+                "files": [
+                    "src/SupportClasses/Support.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Segers",
+                    "homepage": "https://jenssegers.com"
+                },
+                {
+                    "name": "Moloquent",
+                    "homepage": "https://moloquent.github.io"
+                }
+            ],
+            "description": "A MongoDB based Eloquent model and Query builder for Laravel (Moloquent)",
+            "homepage": "https://github.com/moloquent/moloquent",
+            "keywords": [
+                "database",
+                "eloquent",
+                "laravel",
+                "model",
+                "moloquent",
+                "mongo",
+                "mongodb"
+            ],
+            "time": "2016-09-28 15:18:16"
         },
         {
             "name": "mongodb/mongodb",
@@ -4706,7 +4770,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "jenssegers/mongodb": 15
+        "jenssegers/mongodb": 15,
+        "moloquent/moloquent": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

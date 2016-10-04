@@ -9,7 +9,8 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 use Illuminate\Notifications\Notifiable;
-use Jenssegers\Mongodb\Eloquent\Model;
+use Moloquent;
+use MongoModel;
 use NotificationChannels\WebPush\HasPushSubscriptions;
 
 
@@ -21,13 +22,14 @@ use NotificationChannels\WebPush\HasPushSubscriptions;
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $unreadNotifications
  * @mixin \Eloquent
  */
-class User extends Model implements AuthenticatableContract,
+class User extends Moloquent   implements AuthenticatableContract,
     AuthorizableContract,
     CanResetPasswordContract
 {
     use Authenticatable, Authorizable, CanResetPassword;
     use Notifiable;
     use HasPushSubscriptions;
+
 
     protected $collection = "users";
     protected $dates = ['dob'];
@@ -51,13 +53,13 @@ class User extends Model implements AuthenticatableContract,
         return $this->hasMany('App\User', 'id');
     }
 
-    public function friendrequest()
-    {
-        return $this->hasMany('App\FriendRequest', 'to_id');
-    }
-
-    public function requestsent()
+    public function requestReceived()
     {
         return $this->hasMany('App\FriendRequest', 'from_id');
+    }
+
+    public function requestSent()
+    {
+        return $this->hasMany('App\FriendRequest', 'to_id');
     }
 }

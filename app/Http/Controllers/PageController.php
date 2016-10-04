@@ -25,6 +25,7 @@ class PageController extends Controller
     {
         if (Auth::user()) {
 
+            //dd(Auth::user()->requestSent);
             return view("home.index");
         } else {
             return view("welcome");

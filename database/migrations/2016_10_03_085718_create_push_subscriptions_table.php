@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Migrations\Migration;
-use Jenssegers\Mongodb\Schema\Blueprint;
+use Moloquent\Schema\Blueprint;
 
 class CreatePushSubscriptionsTable extends Migration
 {
