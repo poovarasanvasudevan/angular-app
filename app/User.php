@@ -29,7 +29,7 @@ class User extends Model implements AuthenticatableContract,
     use Notifiable;
     use HasPushSubscriptions;
 
-    protected $collection="users";
+    protected $collection = "users";
     protected $dates = ['dob'];
 
     /**
@@ -41,7 +41,23 @@ class User extends Model implements AuthenticatableContract,
         'password', 'remember_token',
     ];
 
-    public function locationId() {
-        return $this->belongsTo("App\Location","location");
+    public function locationId()
+    {
+        return $this->belongsTo("App\Location", "location");
+    }
+
+    public function friends()
+    {
+        return $this->hasMany('App\User', 'id');
+    }
+
+    public function friendrequest()
+    {
+        return $this->hasMany('App\FriendRequest', 'to_id');
+    }
+
+    public function requestsent()
+    {
+        return $this->hasMany('App\FriendRequest', 'from_id');
     }
 }

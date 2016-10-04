@@ -63,7 +63,7 @@
                     </md-button>
 
                     <md-menu-content width="3">
-                        <md-menu-item ng-repeat="item in [1, 2, 3]">
+                        <md-menu-item ng-repeat="item in [1, 2, 3,4]">
                             <md-button ng-click="ctrl.announceClick($index)">
                                 Option [[item]]
                             </md-button>
